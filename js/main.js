@@ -346,9 +346,11 @@
 	function closePopup() {
 		var popupContainer = document.getElementById('popup-container');
 		var youtubeIframe = document.getElementById('youtube-iframe');
+		// var player = $('.player').mb_YTPlayer()
 
 		youtubeIframe.src = "";
 		popupContainer.classList.remove('show');
+		$('.player').mb_YTPlayer().setAttribute("data-property", "{videoURL:'https://www.youtube.com/watch?v=-1ULuiQ-_Rs',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}")
 	}
 
 	var popupButton = document.getElementById('popup-button');
